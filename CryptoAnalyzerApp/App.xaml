@@ -5,5 +5,20 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <local:ViewModelLocator x:Key="VmLocator" />
+        <Style x:Key="CustomBorder" TargetType="{x:Type Border}">
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="BorderBrush" Value="Black" />
+            <Setter Property="CornerRadius" Value="5" />
+            <Setter Property="Background" Value="Aquamarine" />
+            <Setter Property="SnapsToDevicePixels" Value="True" />
+        </Style>
+
+        <Style TargetType="Button">
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Style.Resources>
+        </Style>
     </Application.Resources>
 </Application>

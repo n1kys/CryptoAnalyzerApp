@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using CryptoAnalyzerApp.Services;
+using CryptoAnalyzerApp.ViewModels;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +17,12 @@ namespace CryptoAnalyzerApp
         {
             var services = new ServiceCollection();
 
+            services.AddSingleton<MainViewModel>();
+            services.AddSingleton<MainPageViewModel>();
+            services.AddSingleton<FullListPageViewModel>();
 
+
+            services.AddSingleton<PageService>();
 
 
             _provider = services.BuildServiceProvider();

@@ -9,9 +9,17 @@
         Title="MainWindow" Height="450" Width="800">
     
     <Grid>
-        <Frame Content="{Binding CurrentPage}"/>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-
+        <UniformGrid Columns="10">
+            <Button
+                Margin="5"
+                Command="{Binding GoToBack}"
+                Content="&lt;"/>
+        </UniformGrid>
+        <Frame Grid.Row="1" Content="{Binding CurrentPage}" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
