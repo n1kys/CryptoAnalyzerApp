@@ -4,11 +4,69 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:CryptoAnalyzerApp.Pages"
-      mc:Ignorable="d" 
+      mc:Ignorable="d"
+      DataContext="{Binding Source={StaticResource VmLocator}, Path=ConverterPageViewModel}"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ConverterPage">
 
-    <Grid>
-        
-    </Grid>
+        <Grid>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Border Style="{StaticResource CustomBorder}" Margin="5">
+                <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                    
+                    <TextBlock Text="From" Margin="25 10 0 0 " FontWeight="Bold" FontSize="16"/>
+                    <ComboBox Grid.Row="1" Margin="25" IsEditable="True" />
+                </Grid>
+            </Border>
+
+            <Border Style="{StaticResource CustomBorder}" Margin="5" Grid.Column="1">
+                <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="To" Margin="25 10 0 0 " FontWeight="Bold" FontSize="16"/>
+                <ComboBox Grid.Row="1" Margin="25" IsEditable="True" />
+            </Grid>
+            </Border>
+
+        <Border Style="{StaticResource CustomBorder}" Margin="5" Grid.Row="1" Grid.ColumnSpan="2">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="You pay" Margin="25 10 0 0" FontWeight="Bold" FontSize="16"/>
+                <TextBox Grid.Row="1" Margin="25"/>
+            </Grid>
+        </Border>
+
+        <Border Style="{StaticResource CustomBorder}" Margin="5" Grid.Row="2" Grid.ColumnSpan="2">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="You get" Margin="25 10 0 0" FontWeight="Bold" FontSize="16"/>
+                <TextBox Grid.Row="1" Margin="25"/>
+            </Grid>
+        </Border>
+            
+        </Grid>
 </Page>

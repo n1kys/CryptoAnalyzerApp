@@ -27,7 +27,7 @@ namespace CryptoAnalyzerApp.Services
             _history.Push(page);
         }
 
-        public async void GoToBack()
+        public void GoToBack()
         {
             _history.Pop();
             var page = _history.Peek();

@@ -27,7 +27,7 @@ namespace CryptoAnalyzerApp.ViewModels
 
         public ICommand GoToConverter => new DelegateCommand(() =>
         {
-            //_navigation.Navigate(new ConverterPage());
+            _navigation.Navigate(new ConverterPage());
         });
 
         public ICommand GoToGraphic => new DelegateCommand(() =>

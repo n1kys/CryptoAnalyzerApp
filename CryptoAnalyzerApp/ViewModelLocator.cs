@@ -12,5 +12,6 @@ namespace CryptoAnalyzerApp
         public MainViewModel MainViewModel => Ioc.Resolve<MainViewModel>();
         public MainPageViewModel MainPageViewModel => Ioc.Resolve<MainPageViewModel>();
         public FullListPageViewModel FullListPageViewModel => Ioc.Resolve<FullListPageViewModel>();
+        public ConverterPageViewModel ConverterPageViewModel => Ioc.Resolve<ConverterPageViewModel>();
     }
 }

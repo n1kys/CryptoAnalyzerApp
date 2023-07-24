@@ -120,21 +120,49 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="auto"/>
                     <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button Content="DoSome"
-                            Command="{Binding GoToFullList}" 
-                            Width="70" Height="30" 
-                            VerticalAlignment="Center"
-                            FontSize="16"
-                                Margin="5"
-                            HorizontalAlignment="Left"/>
-                    
-                <Button Grid.Column="1" 
-                        Content="Converter" 
-                        Margin="5" Width="85" 
-                        Height="30" FontSize="16" 
+                <Button Style="{StaticResource CustomButton}"
+                        Content="Full list of crypto"
+                        Command="{Binding GoToFullList}" 
+                        MinWidth="130"
+                        Width="auto" 
+                        Height="auto" 
+                        FontSize="16"
+                        Margin="5"
                         HorizontalAlignment="Left"/>
+
+                <Button Style="{StaticResource CustomButton}"
+                        Grid.Column="1" 
+                        Content="Converter"
+                        Command="{Binding GoToConverter}"
+                        Margin="5"
+                        MinWidth="90"
+                        Width="auto" 
+                        Height="auto"
+                        FontSize="16" 
+                        HorizontalAlignment="Left"/>
+
+                <Button Style="{StaticResource CustomButton}"
+                        Grid.Column="2"
+                        Content="Look at Graphic"
+                        Margin="5"
+                        MinWidth="120"
+                        Width="auto"
+                        Height="auto"
+                        FontSize="16"
+                        HorizontalAlignment="Left"/>
+
+                <Button Style="{StaticResource CustomButton}"
+                        MinWidth="180"
+                        Grid.Column="3"
+                        Content="Open crypto in browser"
+                        Margin="5"
+                        Width="auto"
+                        Height="auto"
+                        FontSize="16"
+                        HorizontalAlignment="Right"/>
             </Grid>
         </Border>    
 

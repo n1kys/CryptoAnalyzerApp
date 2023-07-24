@@ -16,6 +16,7 @@
 
         <UniformGrid Columns="10">
             <Button
+                Style="{StaticResource CustomButton}"
                 Margin="5"
                 Command="{Binding GoToBack}"
                 Content="&lt;"/>

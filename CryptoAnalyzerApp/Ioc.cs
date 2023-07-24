@@ -20,6 +20,7 @@ namespace CryptoAnalyzerApp
             services.AddSingleton<MainViewModel>();
             services.AddSingleton<MainPageViewModel>();
             services.AddSingleton<FullListPageViewModel>();
+            services.AddSingleton<ConverterPageViewModel>();
 
 
             services.AddSingleton<PageService>();
